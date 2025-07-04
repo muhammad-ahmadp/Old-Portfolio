@@ -1,0 +1,46 @@
+.footer__section {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__section span {
+    line-height: 1.2;
+    font-size: 1rem;
+    color: #4f535f;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.social__accounts2 {
+     display: flex;
+     gap: 8px;
+     justify-content: center;
+     align-items: center;
+}
+.social__accounts2 i {
+    font-size: var(--size-xxs);
+    color: #777;
+    transition: color 0.3s;
+     gap: 8px;
+}
+
+.social__accounts2 i:hover {
+    color: #343a40;
+}
+
+
+@media (min-width:768px) {
+    .social__accounts2 i {
+        font-size: var(--size-xs);
+    }
+}
+@media(min-width:1024px){
+    .social__accounts2 i 
+    {
+        font-size: var(--size-base);
+    }
+}

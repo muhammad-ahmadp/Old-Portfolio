@@ -1,0 +1,150 @@
+header {
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+}
+
+.navbar {
+     display: flex;
+     justify-content: space-between;
+     height: 60px;
+     align-items: center;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+     background-color: #f1f5f9;
+     box-sizing: border-box;
+
+}
+
+.logo img {
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+}
+
+.logo {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.navbar ul {
+     list-style: none;
+     display: flex;
+     gap: 20px;
+     padding-right: 3rem;
+}
+
+.navbar ul li a {
+     text-decoration: none;
+     color: #777;
+     font-weight: 600;
+     font-style: normal;
+     transition: color;
+     font-size: var(--size-xxs);
+}
+
+.social__accounts {
+     display: flex;
+     gap: 8px;
+     justify-content: center;
+     align-items: center;
+     padding-left: 4rem;
+}
+
+.social__accounts i {
+     font-size: var(--size-xxs);
+     color: #777;
+     transition: color 0.3s;
+}
+
+.social__accounts i:hover {
+     color: #343a40;
+}
+.hambarger {
+     width: 20px;
+     height: 20px;
+     display: none;
+     width: var(--size-2xl);
+     height: var(--size-2xl);
+     background: none;
+     border: none;
+     color: var(--clr-slate400);
+     z-index: 1000;
+     position: relative;
+}
+
+@media(max-width:850px) {
+     .hambarger {
+          display: block;
+     }
+}
+
+.header__menu {
+     display: none;
+     position: fixed;
+     top: 0;
+     right: -100%;
+     width: 60%;
+     height: 100vh;
+     background: var(--clr-light);
+     box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+     list-style: none;
+     padding: 2em 1em;
+     flex-direction: column;
+     gap: 2em;
+     align-items: flex-start;
+     transition: right 0.3s ease;
+}
+
+.header__menu.active {
+     right: 0;
+     display: flex;
+}
+
+@media (min-width: 768px) {
+     .header__menu {
+          position: static;
+          display: flex !important;
+          flex-direction: row;
+          height: auto;
+          width: auto;
+          background: none;
+          box-shadow: none;
+          padding: 0;
+          gap: 2em;
+          align-items: center;
+     }
+
+     .hambarger {
+          display: none;
+     }
+
+     .navbar ul li a {
+          font-size: var(--size-xs);
+     }
+
+     .social__accounts i {
+          font-size: var(--size-xs);
+     }
+}
+
+@media(min-width:1024px) {
+     .navbar ul li a {
+          font-size: var(--size-base);
+     }
+
+     .social__accounts i {
+          font-size: var(--size-base);
+     }
+
+
+     .logo img {
+          width: 45px;
+          height: 45px;
+     }
+     .navbar
+     {
+           justify-content: space-around;
+           height: 70px;
+     }
+}
